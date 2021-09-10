@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowercaseChar ="abcdefghijklmnopqrstuvwxyz";
-var uppercaseChar ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numberChar = "0123456789";
-var specialChar = "!@#$%^&*()_";
+var lowercase ="abcdefghijklmnopqrstuvwxyz";
+var uppercase ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var number = "0123456789";
+var special = "!@#$%^&*()_";
 var passwordChars;
 
 function generatePassword() {
