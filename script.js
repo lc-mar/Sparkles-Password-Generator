@@ -38,7 +38,7 @@ function generatePassword(){
   if(hasUppercase){
     chosenCharacters += uppercase
   }
-  
+
   if(hasLowercase){
     chosenCharacters += lowercase
   }
@@ -49,4 +49,11 @@ function generatePassword(){
 
   if(hasSpecial) {
     chosenCharacters += special
+  }
+
+  for (var i = 0; i < length; i++) {
+    result += chosenCharacters.charAt(Math.floor(Math.random() * chosenCharacters.length));
+  }
+  return result;
+  
   }
