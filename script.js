@@ -28,3 +28,5 @@ function generatePassword(){
   if(isNaN(length)){
     alert("NUMBER NEEDED");
     return generatePassword()
+  }
+
