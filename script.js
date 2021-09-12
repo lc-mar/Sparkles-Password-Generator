@@ -34,3 +34,19 @@ function generatePassword(){
     alert("Please select a number between 8 - 128!");
     return generatePassword()
   }
+
+  if(hasUppercase){
+    chosenCharacters += uppercase
+  }
+  
+  if(hasLowercase){
+    chosenCharacters += lowercase
+  }
+
+  if(hasNumber) {
+    chosenCharacters += number
+  }
+
+  if(hasSpecial) {
+    chosenCharacters += special
+  }
