@@ -1,7 +1,7 @@
 # Lauren Sparkles Password Generator
 
 ## Description
-
+Using javascript, I created a password generator that will return a password between 8-128 characters. 
 
 ## User Story
 
