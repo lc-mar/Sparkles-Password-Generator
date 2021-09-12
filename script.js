@@ -7,7 +7,7 @@ var special = "!@#$%^&*()_";
 var passwordChars;
 
 
-function writePassword() {
+function enterPassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
@@ -19,8 +19,9 @@ function writePassword(){
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+}
 
-generateBtn.addEventListener("click", generatePassword);
+generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(){
   var result = "";
@@ -32,27 +33,36 @@ function generatePassword(){
 
   if(length<8 || length> 128){
     alert("Please select a number between 8 - 128!");
-    return generatePassword()
+    return generatePassword()  
   }
 
+  var hasUppercase = confirm("Include uppercase letters?");
+  var hasLowercase = confirm("Include lowercase letters?");
+  var hasNumber = confirm("Include numbers?");
+  var hasSpecial = confirm("Include special characters?");
+
+  if(!hasUppercase&&!hasLowercase&&!hasNumber&&!hasSpecial){
+    alert("You must choose at least 1 character type ti cibtubye!");
+    return generatePassword()
+  }
   if(hasUppercase){
-    chosenCharacters += uppercase
+    passwordChars += uppercase
   }
 
   if(hasLowercase){
-    chosenCharacters += lowercase
+    passwordChars += lowercase
   }
 
   if(hasNumber) {
-    chosenCharacters += number
+    passwordChars += number
   }
 
   if(hasSpecial) {
-    chosenCharacters += special
+    passwordChars += special
   }
 
   for (var i = 0; i < length; i++) {
-    result += chosenCharacters.charAt(Math.floor(Math.random() * chosenCharacters.length));
+    result += passwordChars.charAt(Math.floor(Math.random() * passwordChars.length));
   }
   return result;
   
