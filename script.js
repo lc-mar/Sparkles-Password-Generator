@@ -21,3 +21,10 @@ function writePassword(){
   passwordText.value = password;
 
 generateBtn.addEventListener("click", generatePassword);
+
+function generatePassword(){
+  var result = "";
+  var length = prompt("How many characters would you like in your randomly generated password? (between 8 and 128)");
+  if(isNaN(length)){
+    alert("NUMBER NEEDED");
+    return generatePassword()
